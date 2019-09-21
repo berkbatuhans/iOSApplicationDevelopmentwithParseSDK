@@ -24,7 +24,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             $0.server = "https://parseapi.back4app.com"
         }
         Parse.initialize(with: configuration)
-        
         //saveInstallationObject()
         
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound, .carPlay]) { (granted, error) in
@@ -34,6 +33,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 return
             }
             self.getNotificationSettings()
+        }
+        
+        if #available(iOS 13.0, *) {
+            configureRootViewController()
+        } else {
+            // Fallback on earlier versions
         }
         
         return true
@@ -103,6 +108,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+    }
+    
+    @available(iOS 13.0, *)
+    func configureRootViewController(){
+        if PFUser.current() != nil {
+            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyBoard.instantiateViewController(identifier: Identifiers.cities)
+            self.window?.rootViewController = vc
+            self.window?.makeKeyAndVisible()
+        } else {
+            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyBoard.instantiateViewController(identifier: Identifiers.mainVC)
+            self.window?.rootViewController = vc
+            self.window?.makeKeyAndVisible()
+            //Service.shared.goToDestination(destinationName: Identifiers.mainVC,viewController: self)
+        }
+        
     }
     
 }
