@@ -45,31 +45,31 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
         errorLabel.text = ""
         let register = Register(firstName: firstName.text!, lastName: lastName.text!, userName: signUpUsernameField.text!, userEmail: userEmail.text!, password: signUpPasswordField.text!, comfirmPassword: signUpPasswordField.text!)
         
-//        DispatchQueue.global(qos: .userInitiated).async { [weak self] in
-//            do {
-//                try register.checkAllRequirements()
-//                register.saveUserAsync(completion: { (result, success) in
-//                    self?.goToDestination(destinationName: Identifiers.cities)
-//                })
-//            } catch let error as ParseError {
-//                DispatchQueue.main.async {
-//                    self?.errorLabel.text = error.description
-//                }
-//            } catch {
-//                DispatchQueue.main.async {
-//                    self?.errorLabel.text = "Something wrong"
-//                }
-//
-//            }
-//        }
+        DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+            do {
+                try register.checkAllRequirements()
+                register.saveUserAsync(completion: { (result, success) in
+                    Destination.go(from: Identifiers.cities, from: self!)
+                })
+            } catch let error as ParseError {
+                DispatchQueue.main.async {
+                    self?.errorLabel.text = error.description
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    self?.errorLabel.text = "Something wrong"
+                }
 
-        let user = PFUser()
-        user["firstName"] = register.firstName!
-        user["lastName"] = register.lastName
-        user.username = register.userName
-        user.email = register.userEmail
-        user.password = register.password
-        Service.shared.register(user: user, self)
+            }
+        }
+
+//        let user = PFUser()
+//        user["firstName"] = register.firstName!
+//        user["lastName"] = register.lastName
+//        user.username = register.userName
+//        user.email = register.userEmail
+//        user.password = register.password
+//        Service.shared.register(user: user, self)
         
 //        let user = PFUser()
 //        user.username = signUpUsernameField.text
