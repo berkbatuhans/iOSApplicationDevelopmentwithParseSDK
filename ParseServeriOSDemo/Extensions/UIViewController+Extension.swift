@@ -59,4 +59,10 @@ extension UIViewController {
         viewController.present(alertController,animated: true,completion: nil)
     }
     
+    func goToDestination(destinationName: String) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyBoard.instantiateViewController(withIdentifier: destinationName)
+        self.present(vc,animated: true,completion: nil)
+    }
+    
 }
