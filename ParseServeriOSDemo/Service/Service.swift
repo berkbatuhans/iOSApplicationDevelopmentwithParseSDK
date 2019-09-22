@@ -30,6 +30,7 @@ class Service {
     func goToDestination(destinationName: String,viewController: UIViewController) {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyBoard.instantiateViewController(withIdentifier: destinationName)
+        vc.modalPresentationStyle = .fullScreen
         viewController.present(vc,animated: true,completion: nil)
     }
     
