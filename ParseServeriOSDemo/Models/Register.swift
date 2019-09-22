@@ -9,7 +9,7 @@
 import Foundation
 import Parse
 
-class Register: NSObject {
+class Register {
     init(firstName: String?, lastName: String?, userName: String?, userEmail: String?, password: String?, comfirmPassword: String?) {
         self.firstName = firstName
         self.lastName = lastName
@@ -19,6 +19,7 @@ class Register: NSObject {
         self.comfirmPassword = comfirmPassword
     }
     
+    
     var firstName: String?
     var lastName: String?
     var userName: String?
@@ -26,49 +27,23 @@ class Register: NSObject {
     var password: String?
     var comfirmPassword: String?
     
-    func registerUser() throws -> Bool {
-        guard hasEmptyFields() else {
+    func checkAllRequirements() throws {
+        if !firstName!.isEmpty && !lastName!.isEmpty && !userName!.isEmpty && !userEmail!.isEmpty && !password!.isEmpty && !comfirmPassword!.isEmpty {
             throw ParseError.EmptyField
         }
         
-        guard isValidEmail() else {
+        let emailEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
+        let range = userEmail?.matches(emailEx)
+        let result = range != nil ? true : false
+        
+        if result == false {
             throw ParseError.InvalidEmail
         }
         
-        guard validatePasswordsMatch() else {
-            throw ParseError.PasswordsDoNotMatch
-        }
+        //        if (password! == password!) {
+        //            throw ParseError.PasswordsDoNotMatch
+        //        }
         
-        guard checkPasswordSufficientComplexity() else {
-            throw ParseError.InvalidPassword
-        }
-        
-        guard storeSuccessfulRegister() else {
-            throw ParseError.UserNameTaken
-        }
-        
-        return true
-    }
-    
-    func hasEmptyFields() -> Bool {
-        if !firstName!.isEmpty && !lastName!.isEmpty && !userName!.isEmpty && !userEmail!.isEmpty && !password!.isEmpty && !comfirmPassword!.isEmpty {
-            return true
-        }
-        return false
-    }
-    
-    func isValidEmail() -> Bool {
-        let emailEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-].\\.[A-Za-z]"
-        let range = userEmail?.matches(emailEx)
-        let result = range != nil ? true : false
-        return result
-    }
-    
-    func validatePasswordsMatch() -> Bool {
-        return (password! == comfirmPassword!) ? true : false
-    }
-    
-    func checkPasswordSufficientComplexity() -> Bool {
         let capitalLetterRegEx = ".*[A-Z]+.*"
         let textTest = NSPredicate(format: "SELF MATCHES %@",capitalLetterRegEx)
         let capitalResult = textTest.evaluate(with: password!)
@@ -82,11 +57,11 @@ class Register: NSObject {
         let lengthResult = password!.count >= 8
         print("Passed length: \(lengthResult)")
         
-        return capitalResult && numberResult && lengthResult
+        if !capitalResult && !numberResult && !lengthResult {
+            throw ParseError.InvalidPassword
+        }
     }
-    
-    func storeSuccessfulRegister() -> Bool {
-        var success = false
+    func saveUserAsync(completion:@escaping (_ result: PFUser?,_ success: Bool) -> Void) {
         let user = PFUser()
         user["firstName"] = firstName!
         user["lastName"] = lastName!
@@ -94,11 +69,13 @@ class Register: NSObject {
         user.email = userEmail!
         user.password = password!
         
-        try! user.signUp()
-        
-        success = user.isNew
-        
-        return success
+        user.signUpInBackground { (success: Bool, error: Error?) in
+            if success {
+                completion(PFUser.current()!, true)
+            } else {
+                completion(nil,false)
+            }
+        }
     }
     
 }

@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class RegisterVC: UIViewController,UITextFieldDelegate {
+class RegisterVC: UIViewController, UITextFieldDelegate {
 
     @IBOutlet fileprivate var signUpUsernameField: UITextField!
     @IBOutlet fileprivate var signUpPasswordField: UITextField!
@@ -21,6 +21,12 @@ class RegisterVC: UIViewController,UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        if #available(iOS 13.0, *) {
+//            self.presentedViewController?.isModalInPresentation = false
+//            self.presentedViewController?.modalPresentationStyle = .fullScreen
+//        } else {
+//            // Fallback on earlier versions
+//        }
         //var registerController = PFSignUpViewController()
         //registerController.delegate = self
         //self.present(registerController,animated: true,completion: nil)
@@ -30,25 +36,40 @@ class RegisterVC: UIViewController,UITextFieldDelegate {
         firstName.delegate = self
         lastName.delegate = self
         userEmail.delegate = self
+        signUpUsernameField.delegate = self
+        signUpPasswordField.delegate = self
         // Do any additional setup after loading the view.
     }
     
     @IBAction func signUp(_sender: UIButton) {
+        errorLabel.text = ""
         let register = Register(firstName: firstName.text!, lastName: lastName.text!, userName: signUpUsernameField.text!, userEmail: userEmail.text!, password: signUpPasswordField.text!, comfirmPassword: signUpPasswordField.text!)
-        do {
-            try register.registerUser()
-        } catch let error as ParseError {
-            errorLabel.text = error.description
-        } catch {
-            errorLabel.text = "Something wrong"
-        }
-//        let user = PFUser()
-//        user["firstName"] = register.firstName!
-//        user["lastName"] = register.lastName
-//        user.username = register.userName
-//        user.email = register.userEmail
-//        user.password = register.password
-//        Service.shared.register(user: user, self)
+        
+//        DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+//            do {
+//                try register.checkAllRequirements()
+//                register.saveUserAsync(completion: { (result, success) in
+//                    self?.goToDestination(destinationName: Identifiers.cities)
+//                })
+//            } catch let error as ParseError {
+//                DispatchQueue.main.async {
+//                    self?.errorLabel.text = error.description
+//                }
+//            } catch {
+//                DispatchQueue.main.async {
+//                    self?.errorLabel.text = "Something wrong"
+//                }
+//
+//            }
+//        }
+
+        let user = PFUser()
+        user["firstName"] = register.firstName!
+        user["lastName"] = register.lastName
+        user.username = register.userName
+        user.email = register.userEmail
+        user.password = register.password
+        Service.shared.register(user: user, self)
         
 //        let user = PFUser()
 //        user.username = signUpUsernameField.text

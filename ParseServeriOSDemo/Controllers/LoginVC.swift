@@ -28,16 +28,17 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         user.username = signInUsernameField.text!
         user.password = signInPasswordField.text!
         
-        let login = Login(userName: user.username, password: user.password)
-        do {
-            try login.loginUser()
-            self.dismiss(animated: true, completion: nil)
-        } catch let error as ParseError {
-            errorLabel.text = error.description
-        } catch {
-            errorLabel.text = "Sorry something went wrong please try!"
-        }
-        //Service.shared.login(user: user,vc: self)
+        //let login = Login(userName: user.username, password: user.password)
+        Service.shared.login(user: user,vc: self)//login.loginUser()
+//        do {
+//            try
+//            //self.dismiss(animated: true, completion: nil)
+//        } catch let error as ParseError {
+//            errorLabel.text = error.description
+//        } catch {
+//            errorLabel.text = "Sorry something went wrong please try!"
+//        }
+        
     }
     
 
