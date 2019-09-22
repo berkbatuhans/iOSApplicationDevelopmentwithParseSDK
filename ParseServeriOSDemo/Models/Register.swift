@@ -28,7 +28,7 @@ class Register {
     var comfirmPassword: String?
     
     func checkAllRequirements() throws {
-        if !firstName!.isEmpty && !lastName!.isEmpty && !userName!.isEmpty && !userEmail!.isEmpty && !password!.isEmpty && !comfirmPassword!.isEmpty {
+        if !firstName!.isEmpty && !lastName!.isEmpty && !userName!.isEmpty && !userEmail!.isEmpty && !password!.isEmpty/* && !comfirmPassword!.isEmpty*/ {
             throw ParseError.EmptyField
         }
         
