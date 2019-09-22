@@ -16,8 +16,9 @@
         Service.shared.logout(vc: self)
     }
     override func queryForTable() -> PFQuery<PFObject> {
-        let query = PFQuery(className: "Cities")
-        query.order(byAscending: "name")
+//        let query = PFQuery(className: "Cities")
+//        query.order(byAscending: "name")
+        let query = City.query()!
         return query
     }
     override func viewDidLoad() {
