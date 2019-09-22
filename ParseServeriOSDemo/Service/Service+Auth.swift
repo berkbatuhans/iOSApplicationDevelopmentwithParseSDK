@@ -57,7 +57,7 @@ extension Service {
         PFUser.logOutInBackground { (error: Error?) in
             if (error == nil) {
                 //MASK - Oturum Açma sayfasına yönlendir.
-                self.goToDestination(destinationName: Identifiers.signIn, viewController: vc)
+                self.goToDestination(destinationName: Identifiers.mainVC, viewController: vc)
             } else {
                 
                 if let description = error?.localizedDescription {
