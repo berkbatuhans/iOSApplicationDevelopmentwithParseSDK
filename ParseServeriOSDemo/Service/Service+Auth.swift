@@ -17,7 +17,7 @@ extension Service {
             UIViewController.removeSpinner(spinner: sv)
             if success {
                 //TODO: - Kayıt başarılı ise yönlendir.
-                self.goToDestination(destinationName: Identifiers.cities, viewController: vc)
+                Destination.go(from: Identifiers.cities, from: vc)
                 
             } else {
                 
@@ -25,9 +25,9 @@ extension Service {
                     print(code)
                     switch code {
                     case .errorUsernameMissing:
-                        self.showAlert(withTitle: "Kayıt Ol", withMessage: "Kullanıcı Adı Eksik veya Boş", withActionTitle: "Tamam", viewController: vc)
+                        Alert.present(title: "Kayıt Ol", message: "Kullanıcı adı eksik veya boş", actions: .close, from: vc)
                     default:
-                        self.showAlert(withTitle: "Kayıt Ol", withMessage: error.localizedDescription, withActionTitle: "Tamam", viewController: vc)
+                        Alert.present(title: "Kayıt Ol", message: error.localizedDescription, actions: .close, from: vc)
                         break
                     }
                     
@@ -43,11 +43,13 @@ extension Service {
             UIViewController.removeSpinner(spinner: sv)
             if user != nil {
                 //TODO: - Oturum açma başarılı ise yönlendir.
-                self.goToDestination(destinationName: Identifiers.cities, viewController: vc)
+                Destination.go(from: Identifiers.cities, from: vc)
                 
             } else {
                 if let description = error?.localizedDescription {
-                    self.showAlert(withTitle: "Oturum Aç", withMessage: description, withActionTitle: "Tamam",viewController: vc)
+                    Alert.present(title: "Oturum Aç", message: description, actions: .ok(handler: {
+                        print("Oturum Açma Hatası Tamam Butonu")
+                    }),.close , from: vc)
                 }
             }
         }
@@ -57,16 +59,16 @@ extension Service {
         PFUser.logOutInBackground { (error: Error?) in
             if (error == nil) {
                 //MASK - Oturum Açma sayfasına yönlendir.
-                self.goToDestination(destinationName: Identifiers.mainVC, viewController: vc)
+                Destination.go(from: Identifiers.mainVC, from: vc)
             } else {
                 
                 if let description = error?.localizedDescription {
                     //TODO: - HATA Mesajı Alert Extensionu Yaz.
-                    self.showAlert(withTitle: "Oturumu Kapat", withMessage: description, withActionTitle: "Tamam",viewController: vc)
+                    Alert.present(title: "Oturumu Kapat", message: description, actions: .close, from: vc)
                     
                 } else {
                     //TODO: - HATA Mesajı Alert Extensionu Yaz. Oturum kapatma hatalı
-                    self.showAlert(withTitle: "Oturumu Kapat", withMessage: "Oturum kapatılamıyor", withActionTitle: "Tamam",viewController: vc)
+                    Alert.present(title: "Oturumu Kapat", message: "Oturum kapatılamıyor", actions: .close, from: vc)
                     
                 }
             }
