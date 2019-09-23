@@ -42,7 +42,6 @@
 		1282318B2332627F00F55997 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1282318E2332627F00F55997 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		128231902332627F00F55997 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1282319623326CD400F55997 /* ParseServeriOSDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ParseServeriOSDemo.entitlements; sourceTree = "<group>"; };
 		1282319923327AFA00F55997 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		1282319D2332A34500F55997 /* CitiesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesCell.swift; sourceTree = "<group>"; };
 		1282319F2332A3B100F55997 /* CitiesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesVC.swift; sourceTree = "<group>"; };
@@ -99,16 +98,17 @@
 		128231832332627D00F55997 /* ParseServeriOSDemo */ = {
 			isa = PBXGroup;
 			children = (
-				128231B12333936000F55997 /* Startup */,
-				128231B02333931300F55997 /* Resources */,
-				128231AC2333032C00F55997 /* Helper */,
-				1282319C23327B0E00F55997 /* Extensions */,
-				128231A72332E17100F55997 /* Service */,
-				1282319623326CD400F55997 /* ParseServeriOSDemo.entitlements */,
-				128231AF2333928800F55997 /* Supporting Files */,
-				128231BA2333958400F55997 /* Models */,
-				128231B92333957200F55997 /* Views */,
 				128231B52333949B00F55997 /* Controllers */,
+				1282319C23327B0E00F55997 /* Extensions */,
+				128231AC2333032C00F55997 /* Helpers */,
+				128231BA2333958400F55997 /* Models */,
+				12DC1FE5233843F8009B049B /* Networking */,
+				128231B02333931300F55997 /* Resources */,
+				128231A72332E17100F55997 /* Service */,
+				128231B12333936000F55997 /* Startup */,
+				12DC1FE623384419009B049B /* Storyboards */,
+				128231AF2333928800F55997 /* Supporting Files */,
+				128231B92333957200F55997 /* Views */,
 			);
 			path = ParseServeriOSDemo;
 			sourceTree = "<group>";
@@ -132,12 +132,12 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
-		128231AC2333032C00F55997 /* Helper */ = {
+		128231AC2333032C00F55997 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				128231AD2333034300F55997 /* Constants.swift */,
 			);
-			path = Helper;
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		128231AF2333928800F55997 /* Supporting Files */ = {
@@ -251,10 +251,24 @@
 		128231C62333DB4800F55997 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				128231882332627D00F55997 /* Main.storyboard */,
 				128231862332627D00F55997 /* MainVC.swift */,
 			);
 			name = Main;
+			sourceTree = "<group>";
+		};
+		12DC1FE5233843F8009B049B /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		12DC1FE623384419009B049B /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				128231882332627D00F55997 /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		60DC3748EFE8D687808908C8 /* Frameworks */ = {
