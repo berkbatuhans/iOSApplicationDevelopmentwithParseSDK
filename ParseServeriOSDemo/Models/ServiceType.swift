@@ -9,19 +9,13 @@
 import Foundation
 import Parse
 
-final class City: PFObject {
+final class ServiceType: PFObject {
     @NSManaged var name : String?
-    @NSManaged var stateCode: NSNumber?
-    @NSManaged var location: PFGeoPoint?
-    @NSManaged var rating: NSNumber?
     @NSManaged var image: PFFileObject?
     
-    init(name: String, stateCode: NSNumber,location: PFGeoPoint, rating: NSNumber,image:PFFileObject) {
+    init(name: String,image:PFFileObject) {
         super.init()
         self.name = name
-        self.stateCode = stateCode
-        self.location = location
-        self.rating = rating
         self.image = image
     }
     override init() {
@@ -29,15 +23,15 @@ final class City: PFObject {
     }
     
     override class func query() -> PFQuery<PFObject>? {
-        let query = PFQuery(className: City.parseClassName())
+        let query = PFQuery(className: ServiceType.parseClassName())
         query.order(byDescending: "createdAt")
         query.cachePolicy = .networkOnly
         return query
     }
 }
 
-extension City : PFSubclassing {
+extension ServiceType : PFSubclassing {
     static func parseClassName() -> String {
-        return "City"
+        return "\(self)"
     }
 }

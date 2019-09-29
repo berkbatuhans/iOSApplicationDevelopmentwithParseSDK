@@ -1,29 +1,25 @@
 //
-//  TabbarVC.swift
+//  ServiceProviderVC.swift
 //  ParseServeriOSDemo
 //
-//  Created by Berk Batuhan ŞAKAR on 19.09.2019.
+//  Created by Berk Batuhan ŞAKAR on 29.09.2019.
 //  Copyright © 2019 Berk Batuhan ŞAKAR. All rights reserved.
 //
 
 import UIKit
 
-class TabbarVC: UITabBarController {
+class ServiceProviderVC: UIViewController {
     
+    var currentObject : ServiceType?
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        tabBar.barTintColor = UIColor(red: 249/255, green: 249/255, blue: 249/255, alpha: 1)
-       
-        
-//            UIColor(red: 255/255, green: 106/255, blue: 6/255, alpha: 1.0)
-        tabBar.unselectedItemTintColor = .lightGray
-        removeTabbarItemsText()
-
+        if let object = currentObject {
+            navigationItem.title = object.name
+        }
         // Do any additional setup after loading the view.
     }
-    
+
 
     /*
     // MARK: - Navigation

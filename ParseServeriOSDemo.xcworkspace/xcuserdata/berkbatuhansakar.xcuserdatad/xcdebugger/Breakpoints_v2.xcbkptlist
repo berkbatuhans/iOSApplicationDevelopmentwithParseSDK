@@ -3,4 +3,70 @@
    uuid = "40394DD2-5951-4831-B30A-4CA7D4F60291"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CD3BBD1C-48E4-4912-85FE-57CE7DFC14CE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ParseServeriOSDemo/Controllers/MainVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "saveObject()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "56AE7E78-6801-4287-BB8D-00683A84464B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ParseServeriOSDemo/Service/Service+Crud.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "read(_:withId:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "56AE7E78-6801-4287-BB8D-00683A84464B - a25825fe0430c0da"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ParseServeriOSDemo.Service.read&lt;A where A: __C.PFQuery&lt;__C.PFObject&gt;&gt;(_: A, withId: Swift.String) -&gt; ()"
+                  moduleName = "ParseServeriOSDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/berkbatuhansakar/Projects/organizasyon_ios_trial/ParseServeriOSDemo/ParseServeriOSDemo/Service/Service+Crud.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "176">
+               </Location>
+               <Location
+                  uuid = "56AE7E78-6801-4287-BB8D-00683A84464B - 488f97e802281f47"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.PFObject&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in ParseServeriOSDemo.Service.read&lt;A where A: __C.PFQuery&lt;__C.PFObject&gt;&gt;(_: A, withId: Swift.String) -&gt; ()"
+                  moduleName = "ParseServeriOSDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/berkbatuhansakar/Projects/organizasyon_ios_trial/ParseServeriOSDemo/ParseServeriOSDemo/Service/Service+Crud.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "100">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

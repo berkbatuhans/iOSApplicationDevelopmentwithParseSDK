@@ -17,7 +17,7 @@ extension Service {
             UIViewController.removeSpinner(spinner: sv)
             if success {
                 //TODO: - Kayıt başarılı ise yönlendir.
-                Destination.go(from: Identifiers.cities, from: vc)
+                Destination.go(destination: Identifiers.cities,from: vc)
                 
             } else {
                 
@@ -43,7 +43,7 @@ extension Service {
             UIViewController.removeSpinner(spinner: sv)
             if user != nil {
                 //TODO: - Oturum açma başarılı ise yönlendir.
-                Destination.go(from: Identifiers.cities, from: vc)
+                Destination.go(destination: Identifiers.cities, from: vc)
                 
             } else {
                 if let description = error?.localizedDescription {
@@ -59,7 +59,7 @@ extension Service {
         PFUser.logOutInBackground { (error: Error?) in
             if (error == nil) {
                 //MASK - Oturum Açma sayfasına yönlendir.
-                Destination.go(from: Identifiers.mainVC, from: vc)
+                Destination.go(destination: Identifiers.mainVC, from: vc)
             } else {
                 
                 if let description = error?.localizedDescription {

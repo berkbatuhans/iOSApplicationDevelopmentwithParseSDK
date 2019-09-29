@@ -15,6 +15,7 @@ class CitiesCell: PFTableViewCell {
     
     @IBOutlet weak var cellImageView: PFImageView!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var plateNumber: UILabel!
     
     
 }

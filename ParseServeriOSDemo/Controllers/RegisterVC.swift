@@ -49,7 +49,14 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
             do {
                 try register.checkAllRequirements()
                 register.saveUserAsync(completion: { (result, success) in
-                    Destination.go(from: Identifiers.cities, from: self!)
+                    if success {
+                        //TODO: - Kayıt başarılı ise yönlendir.
+                        Destination.go(destination: Identifiers.cities, from: self)
+                        
+                    } else {
+                        Alert.present(title: "Kayıt Ol", message: "Kullanıcı adı eksik veya boş", actions: .close, from: self!)
+                    }
+                    
                 })
             } catch let error as ParseError {
                 DispatchQueue.main.async {

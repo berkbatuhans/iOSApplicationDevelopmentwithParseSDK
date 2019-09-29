@@ -108,20 +108,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        PFPush.handle(userInfo)
+        if application.applicationState == .inactive {
+            PFAnalytics.trackAppOpenedWithRemoteNotificationPayload(inBackground: userInfo, block: nil)
+        }
     }
     
     @available(iOS 13.0, *)
     func configureRootViewController(){
         if PFUser.current() != nil {
-            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyBoard.instantiateViewController(identifier: Identifiers.cities)
-            self.window?.rootViewController = vc
-            self.window?.makeKeyAndVisible()
+            
+//            Destination.go(from: Identifiers.mainVC, true, self.window)
+            Destination.go(destination: Identifiers.mainVC, presentationStyle: .fullScreen, true, self.window)
+//
+//            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+//            let vc = storyBoard.instantiateViewController(identifier: Identifiers.cities)
+//            self.window?.rootViewController = vc
+//            self.window?.makeKeyAndVisible()
         } else {
-            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyBoard.instantiateViewController(identifier: Identifiers.mainVC)
-            self.window?.rootViewController = vc
-            self.window?.makeKeyAndVisible()
+//            Destination.go(from: Identifiers.auth, true, self.window)
+            Destination.go(destination: Identifiers.auth, presentationStyle: .fullScreen, true, self.window)
+//            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+//            let vc = storyBoard.instantiateViewController(identifier: Identifiers.mainVC)
+//            self.window?.rootViewController = vc
+//            self.window?.makeKeyAndVisible()
             //Service.shared.goToDestination(destinationName: Identifiers.mainVC,viewController: self)
         }
         

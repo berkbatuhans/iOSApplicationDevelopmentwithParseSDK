@@ -15,28 +15,23 @@ class MainVC: UIViewController,UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       //saveObject()
-        
+//       saveObject()
+//        Service.shared.read(City.query()!, withId: "2vltnDVJT4")
     }
     
     override func viewDidAppear(_ animated: Bool) {
-//        if PFUser.current() != nil {
-//            Service.shared.goToDestination(destinationName: Identifiers.cities,viewController: self)
-//        } else {
-//            //Service.shared.goToDestination(destinationName: Identifiers.mainVC,viewController: self)
-//        }
     }
     
     func saveObject() {
-//        let cities = PFObject(className: "Cities")
-//        cities["name"] = "İstanbul"
-//        cities["code"] = 34
-//        cities.saveInBackground()
-        let city = City()
-        city.name = "İstanbul"
-        city.location = PFGeoPoint(latitude: 34.0, longitude: 34.0)
-        city.rating = 5
-        city.saveInBackground()
+//        let city = City()
+//        city.name = "Küçükçekmece"
+//        city.location = PFGeoPoint(latitude: 34.0, longitude: 34.0)
+//        city.rating = 5
+//        Service.shared.create(city)
+        
+        let serviceType = ServiceType()
+        serviceType.name = "Mekanlar"
+        Service.shared.create(serviceType)
     }
     
     func list() {
