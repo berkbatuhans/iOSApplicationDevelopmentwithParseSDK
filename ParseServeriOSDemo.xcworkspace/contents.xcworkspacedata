@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Istanbul.gpx">
-   </FileRef>
-   <FileRef
       location = "group:ParseServeriOSDemo.xcodeproj">
    </FileRef>
    <FileRef
