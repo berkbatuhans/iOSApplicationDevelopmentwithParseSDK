@@ -17,7 +17,7 @@ extension Service {
             UIViewController.removeSpinner(spinner: sv)
             if success {
                 //TODO: - Kayıt başarılı ise yönlendir.
-                Destination.go(destination: Identifiers.cities,from: vc)
+                Destination.go(destination: Identifiers.mainVC,from: vc)
                 
             } else {
                 
