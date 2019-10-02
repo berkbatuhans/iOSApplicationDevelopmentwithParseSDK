@@ -8,5 +8,6 @@ target 'ParseServeriOSDemo' do
   # Pods for ParseServeriOSDemo
   pod 'Parse'
   pod 'Parse/UI'
+  pod 'OnboardKit'
 
 end

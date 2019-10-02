@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Kho-o5-D6O">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0iG-L5-Bs9">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -21,25 +21,31 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nd0-kZ-DBA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-102" y="-8"/>
+            <point key="canvasLocation" x="807.24637681159425" y="-8.0357142857142847"/>
         </scene>
-        <!--LoginVC-->
+        <!--GİRİŞ YAP-->
         <scene sceneID="aIF-pB-kB6">
             <objects>
-                <viewController storyboardIdentifier="LoginVC" modalPresentationStyle="formSheet" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Kho-o5-D6O" customClass="LoginVC" customModule="ParseServeriOSDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVCC" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Kho-o5-D6O" customClass="LoginVC" customModule="ParseServeriOSDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="49S-gE-Svw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="9ca-RO-VkO">
-                                <rect key="frame" x="20" y="144" width="374" height="300.5"/>
+                                <rect key="frame" x="20" y="188" width="374" height="300.5"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="berk" borderStyle="roundedRect" placeholder="Kullanıcı Adı" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wUY-1e-tMD">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Kullanıcı Adı" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wUY-1e-tMD">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                        <color key="backgroundColor" red="0.96078431369999995" green="0.43529411759999997" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="12345678" borderStyle="roundedRect" placeholder="Parola" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wyv-iw-HIp">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Şifre" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wyv-iw-HIp">
                                         <rect key="frame" x="0.0" y="70" width="374" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -82,7 +88,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HqY-Pa-ndl"/>
                     </view>
-                    <navigationItem key="navigationItem" id="M8R-s3-QbK"/>
+                    <navigationItem key="navigationItem" title="GİRİŞ YAP" id="M8R-s3-QbK">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="chevron.left" catalog="system" id="9FK-Wo-Sa2">
+                            <connections>
+                                <action selector="back:" destination="Kho-o5-D6O" id="cds-wt-fYg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="errorLabel" destination="7Lw-FJ-hqq" id="tM8-Od-Oqu"/>
                         <outlet property="signInPasswordField" destination="Wyv-iw-HIp" id="aFI-fg-RTF"/>
@@ -91,7 +103,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Nw-Ae-Uxf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-849" y="-8"/>
+            <point key="canvasLocation" x="60.869565217391312" y="-8.0357142857142847"/>
         </scene>
         <!--RegisterVC-->
         <scene sceneID="ABJ-fS-QSm">
@@ -182,5 +194,26 @@
             </objects>
             <point key="canvasLocation" x="-816" y="658"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9sJ-7R-LQl">
+            <objects>
+                <navigationController storyboardIdentifier="LoginVC" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0iG-L5-Bs9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1oD-fE-hhU">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Kho-o5-D6O" kind="relationship" relationship="rootViewController" id="fNB-Ly-AD5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UlO-F9-izl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-849.27536231884062" y="-8.0357142857142847"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="chevron.left" catalog="system" width="46" height="64"/>
+    </resources>
 </document>

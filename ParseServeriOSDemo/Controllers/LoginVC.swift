@@ -41,5 +41,10 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         
     }
     
-
+    @IBAction func back(_ sender: Any) {
+       self.navigationController?.dismiss(animated: true, completion: {
+           // completion, do something or make it nil.
+       })
+    }
+    
 }

@@ -14,7 +14,7 @@ class TabbarVC: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tabBar.barTintColor = UIColor(red: 249/255, green: 249/255, blue: 249/255, alpha: 1)
+        tabBar.barTintColor = UIColor.rgb(red: 249, green: 249, blue: 249)
        
         
 //            UIColor(red: 255/255, green: 106/255, blue: 6/255, alpha: 1.0)

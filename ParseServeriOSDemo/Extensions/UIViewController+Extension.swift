@@ -55,4 +55,12 @@ extension UIViewController {
         viewController.present(alertController,animated: true,completion: nil)
     }
     
+    class var storyboardID: String {
+        return "\(self)"
+    }
+    
+    static func instantiateFromAppStoryboard(appStoryboard: AppStoryboard) -> Self {
+        return appStoryboard.viewController(viewControllerClass: self)
+    }
+    
 }

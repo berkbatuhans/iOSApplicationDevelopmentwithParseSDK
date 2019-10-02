@@ -16,6 +16,7 @@ struct Segues {
 
 /// App identifiers
 struct Identifiers {
+    static let onboardingVC = "OnboardingVC"
     static let mainVC = "MainVC"
     static let cities     = "CitiesVC"
     static let loggedIn  = LoginVC.self
@@ -43,14 +44,3 @@ enum AppStoryboard: String {
         return instance.instantiateInitialViewController()
     }
 }
-
-extension UIViewController {
-    class var storyboardID: String {
-        return "\(self)"
-    }
-    
-    static func instantiateFromAppStoryboard(appStoryboard: AppStoryboard) -> Self {
-        return appStoryboard.viewController(viewControllerClass: self)
-    }
-}
-

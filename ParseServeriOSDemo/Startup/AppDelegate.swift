@@ -14,6 +14,8 @@ import UserNotifications
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
+    
+    
     var window: UIWindow?
     
     
@@ -34,6 +36,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
             self.getNotificationSettings()
         }
+        
+        
         
         if #available(iOS 13.0, *) {
             configureRootViewController()
@@ -117,7 +121,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     @available(iOS 13.0, *)
     func configureRootViewController(){
         if PFUser.current() != nil {
-            
+
 //            Destination.go(from: Identifiers.mainVC, true, self.window)
             Destination.go(destination: Identifiers.mainVC, presentationStyle: .fullScreen, true, self.window)
 //

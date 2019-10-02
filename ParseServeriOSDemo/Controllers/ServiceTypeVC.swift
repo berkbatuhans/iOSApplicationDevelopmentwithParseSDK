@@ -30,8 +30,12 @@ class ServiceTypeVC: PFQueryCollectionViewController {
         //SetupGrid View
         self.setupGridView()
         
+//        me()
+        
+        collectionView.allowsSelection = true
+        collectionView.allowsMultipleSelection = false
+        
     }
-    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         self.setupGridView()
@@ -59,6 +63,8 @@ class ServiceTypeVC: PFQueryCollectionViewController {
         cell.image.file = imageFile
         cell.image.loadInBackground()
         cell.image.layer.cornerRadius = 15.0
+//        cell.vfx.isHidden = false
+//        cell.vfx.backgroundColor = UIColor.startColor.withAlphaComponent(0.0)
         //rd'a dönüştürme.
         cell.contentView.layer.cornerRadius = 15.0
         cell.contentView.layer.borderWidth = 1.0
@@ -71,6 +77,10 @@ class ServiceTypeVC: PFQueryCollectionViewController {
         cell.layer.masksToBounds = false
         cell.layer.shadowPath = UIBezierPath(roundedRect: cell.bounds,cornerRadius: cell.contentView.layer.cornerRadius).cgPath
         
+//        cell.vfx.clipsToBounds = true
+//        let shapeLayer = CAShapeLayer()
+//        shapeLayer.path = UIBezierPath(roundedRect: cell.bounds, cornerRadius: cell.contentView.layer.cornerRadius).cgPath
+//        cell.vfx.layer.mask = shapeLayer
         return cell
     }
     
@@ -82,21 +92,31 @@ class ServiceTypeVC: PFQueryCollectionViewController {
         
     }
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        
-        if #available(iOS 13.0, *) {
-            let vc = storyboard?.instantiateViewController(identifier: Identifiers.serviceProvider) as! ServiceProviderVC
-            vc.currentObject = objects[indexPath.row] as? ServiceType
-            self.navigationController?.pushViewController(vc, animated: true)
-        } else {
-            // Fallback on earlier versions
-        }
-        
+        let object = objects[indexPath.row] as? ServiceType
+//        collectionView.deselectItem(at: indexPath, animated: true)
+//        let x = objects[indexPath.row] as? ServiceType
+//        print("SELECTED \(x!.name)")
+//        let vc = storyboard?.instant.instantiateViewController(identifier: Identifiers.serviceProvider) as! ServiceProviderVC
+        let vc = storyboard?.instantiateViewController(withIdentifier: Identifiers.serviceProvider) as! ServiceProviderVC
+        vc.currentObject = object
+//        self.deselectAllItems(animated: true)
+        self.navigationController?.pushViewController(vc, animated: true)
+//        if #available(iOS 13.0, *) {
+//
+////            collectionView.deselectItem(at: indexPath, animated: false)
+//
+//        } else {
+//            // Fallback on earlier versions
+//        }
+//
     }
     
-    override func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        collectionView.deselectItem(at: indexPath, animated: true)
-    }
+    
+//    override func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+//        print("deselect")
+//
+//    }
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //        if segue.identifier == "serviceProviderVC"
@@ -110,18 +130,19 @@ class ServiceTypeVC: PFQueryCollectionViewController {
         //            }
         //        }
         
-        if segue.identifier == "serviceProviderVC" {
-            print("segue yakalandı!")
-            if let destination = segue.destination as? ServiceProviderVC {
-                let cell = sender as! ServiceTypeCell
-                let indexPath = collectionView.indexPath(for: cell)
-                let selectedData = objects[(indexPath?.row)!]
-                
-                // postedData is the variable that will be sent, make sure to declare it in YourDestinationViewController
-                destination.currentObject = selectedData as! ServiceType
-            }
-        }
+//        if segue.identifier == "serviceProviderVC" {
+//            print("segue yakalandı!")
+//            if let destination = segue.destination as? ServiceProviderVC {
+//                let cell = sender as! ServiceTypeCell
+//                let indexPath = collectionView.indexPath(for: cell)
+//                let selectedData = objects[(indexPath?.row)!]
+//
+//                // postedData is the variable that will be sent, make sure to declare it in YourDestinationViewController
+//                destination.currentObject = selectedData as! ServiceType
+//            }
+//        }
     }
+    
     
     
     

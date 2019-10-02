@@ -13,11 +13,15 @@ class ServiceTypeCell: PFCollectionViewCell {
     
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var image: PFImageView!
+    @IBOutlet weak var vfx: UIVisualEffectView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
     }
+    
+    
     
     func set(name: String, image: PFFileObject?) {
         

@@ -12,6 +12,13 @@
 		122CFB312341144E0088387B /* ServiceProviderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122CFB2F2341144E0088387B /* ServiceProviderVC.swift */; };
 		122CFB322341144E0088387B /* ServiceProviderVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 122CFB302341144E0088387B /* ServiceProviderVC.xib */; };
 		125074162335351E008D40B9 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125074152335351E008D40B9 /* Login.swift */; };
+		1255F66E23435A8200F9C205 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1255F66D23435A8200F9C205 /* UICollectionView+Extension.swift */; };
+		1255F6702343720400F9C205 /* UnderlinedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1255F66F2343720400F9C205 /* UnderlinedTextField.swift */; };
+		125D4AD923416CE500E1CA20 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125D4AD823416CE500E1CA20 /* UIView+Extension.swift */; };
+		125D4AE0234234E000E1CA20 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 125D4ADF234234E000E1CA20 /* Onboarding.storyboard */; };
+		125D4AE22342390700E1CA20 /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125D4AE12342390700E1CA20 /* UIDevice+Extension.swift */; };
+		125D4AE423423A7B00E1CA20 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125D4AE323423A7B00E1CA20 /* UIImageView+Extension.swift */; };
+		125D4AE72342556900E1CA20 /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125D4AE62342556900E1CA20 /* OnboardingVC.swift */; };
 		128231852332627D00F55997 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128231842332627D00F55997 /* AppDelegate.swift */; };
 		128231872332627D00F55997 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128231862332627D00F55997 /* MainVC.swift */; };
 		1282318C2332627F00F55997 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1282318B2332627F00F55997 /* Assets.xcassets */; };
@@ -32,6 +39,7 @@
 		128231CA2334168C00F55997 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128231C92334168C00F55997 /* Register.swift */; };
 		128231CC2334202A00F55997 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128231CB2334202A00F55997 /* String+Extension.swift */; };
 		128231CE233424DE00F55997 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128231CD233424DE00F55997 /* Enums.swift */; };
+		128D67332344134A00EA9924 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128D67322344134A00EA9924 /* UIColor+Extension.swift */; };
 		12A6480A233E5443002A0658 /* CityE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A64809233E5443002A0658 /* CityE.swift */; };
 		12A6480F233FC7AF002A0658 /* ServiceTypeVC_Back.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A6480E233FC7AF002A0658 /* ServiceTypeVC_Back.swift */; };
 		12A64811233FD04B002A0658 /* ServiceTypeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A64810233FD04B002A0658 /* ServiceTypeVC.swift */; };
@@ -54,6 +62,13 @@
 		122CFB2F2341144E0088387B /* ServiceProviderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProviderVC.swift; sourceTree = "<group>"; };
 		122CFB302341144E0088387B /* ServiceProviderVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceProviderVC.xib; sourceTree = "<group>"; };
 		125074152335351E008D40B9 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		1255F66D23435A8200F9C205 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
+		1255F66F2343720400F9C205 /* UnderlinedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlinedTextField.swift; sourceTree = "<group>"; };
+		125D4AD823416CE500E1CA20 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		125D4ADF234234E000E1CA20 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		125D4AE12342390700E1CA20 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
+		125D4AE323423A7B00E1CA20 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		125D4AE62342556900E1CA20 /* OnboardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingVC.swift; sourceTree = "<group>"; };
 		128231812332627D00F55997 /* ParseServeriOSDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParseServeriOSDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		128231842332627D00F55997 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		128231862332627D00F55997 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -76,6 +91,7 @@
 		128231C92334168C00F55997 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		128231CB2334202A00F55997 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		128231CD233424DE00F55997 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		128D67322344134A00EA9924 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		12A64809233E5443002A0658 /* CityE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityE.swift; sourceTree = "<group>"; };
 		12A6480E233FC7AF002A0658 /* ServiceTypeVC_Back.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTypeVC_Back.swift; sourceTree = "<group>"; };
 		12A64810233FD04B002A0658 /* ServiceTypeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTypeVC.swift; sourceTree = "<group>"; };
@@ -125,6 +141,14 @@
 			name = ServiceProvider;
 			sourceTree = "<group>";
 		};
+		125D4AE52342552100E1CA20 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				125D4AE62342556900E1CA20 /* OnboardingVC.swift */,
+			);
+			name = Onboarding;
+			sourceTree = "<group>";
+		};
 		128231782332627D00F55997 = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +191,12 @@
 				1282319923327AFA00F55997 /* UIViewController+Extension.swift */,
 				128231BC2333A32300F55997 /* UITabbarController+Extension.swift */,
 				128231CB2334202A00F55997 /* String+Extension.swift */,
+				125D4AD823416CE500E1CA20 /* UIView+Extension.swift */,
+				125D4AE12342390700E1CA20 /* UIDevice+Extension.swift */,
+				125D4AE323423A7B00E1CA20 /* UIImageView+Extension.swift */,
+				1255F66D23435A8200F9C205 /* UICollectionView+Extension.swift */,
+				1255F66F2343720400F9C205 /* UnderlinedTextField.swift */,
+				128D67322344134A00EA9924 /* UIColor+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -217,6 +247,7 @@
 		128231B52333949B00F55997 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				125D4AE52342552100E1CA20 /* Onboarding */,
 				12A6480B233FB716002A0658 /* ServiceType */,
 				122CFB342341146C0088387B /* ServiceProvider */,
 				12DC1FEC233A8B4C009B049B /* Settings */,
@@ -335,6 +366,7 @@
 			children = (
 				128231882332627D00F55997 /* Main.storyboard */,
 				12DC1FF6233C19D9009B049B /* Auth.storyboard */,
+				125D4ADF234234E000E1CA20 /* Onboarding.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -451,6 +483,7 @@
 				128231B42333941300F55997 /* Main.storyboard in Resources */,
 				128231B32333940900F55997 /* LaunchScreen.storyboard in Resources */,
 				122CFB322341144E0088387B /* ServiceProviderVC.xib in Resources */,
+				125D4AE0234234E000E1CA20 /* Onboarding.storyboard in Resources */,
 				1282318C2332627F00F55997 /* Assets.xcassets in Resources */,
 				121442C22340FA83008107D3 /* ServiceTypeCell.xib in Resources */,
 			);
@@ -505,6 +538,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				125D4AD923416CE500E1CA20 /* UIView+Extension.swift in Sources */,
+				125D4AE72342556900E1CA20 /* OnboardingVC.swift in Sources */,
 				128231A92332E30000F55997 /* Service.swift in Sources */,
 				12DC1FF5233AAE33009B049B /* Service+Crud.swift in Sources */,
 				128231C02333A46A00F55997 /* TabbarVC.swift in Sources */,
@@ -526,15 +561,20 @@
 				128231852332627D00F55997 /* AppDelegate.swift in Sources */,
 				12DC1FEB233A4CC9009B049B /* Venue.swift in Sources */,
 				1282319A23327AFA00F55997 /* UIViewController+Extension.swift in Sources */,
+				1255F6702343720400F9C205 /* UnderlinedTextField.swift in Sources */,
 				128231BD2333A32300F55997 /* UITabbarController+Extension.swift in Sources */,
 				121442C12340FA83008107D3 /* ServiceTypeCell.swift in Sources */,
 				12A64813233FDBE2002A0658 /* ServiceType.swift in Sources */,
+				125D4AE22342390700E1CA20 /* UIDevice+Extension.swift in Sources */,
 				128231AE2333034300F55997 /* Constants.swift in Sources */,
 				12DC1FF1233A8DB6009B049B /* UserInfoHeader.swift in Sources */,
 				12A64811233FD04B002A0658 /* ServiceTypeVC.swift in Sources */,
 				12A6480A233E5443002A0658 /* CityE.swift in Sources */,
+				125D4AE423423A7B00E1CA20 /* UIImageView+Extension.swift in Sources */,
 				128231CC2334202A00F55997 /* String+Extension.swift in Sources */,
+				1255F66E23435A8200F9C205 /* UICollectionView+Extension.swift in Sources */,
 				12DC1FEE233A8B76009B049B /* SettingsVC.swift in Sources */,
+				128D67332344134A00EA9924 /* UIColor+Extension.swift in Sources */,
 				128231CE233424DE00F55997 /* Enums.swift in Sources */,
 				128231C82333DB6300F55997 /* RegisterVC.swift in Sources */,
 			);

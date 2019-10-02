@@ -43,23 +43,33 @@ extension Service {
             UIViewController.removeSpinner(spinner: sv)
             if user != nil {
                 //TODO: - Oturum açma başarılı ise yönlendir.
-                Destination.go(destination: Identifiers.cities, from: vc)
+                Destination.go(destination: Identifiers.mainVC, from: vc)
                 
             } else {
-                if let description = error?.localizedDescription {
-                    Alert.present(title: "Oturum Aç", message: description, actions: .ok(handler: {
-                        print("Oturum Açma Hatası Tamam Butonu")
-                    }),.close , from: vc)
+                if let error = error, let code = PFErrorCode(rawValue: error._code) {
+                    print(code)
+                    switch code {
+                    case .errorUsernameMissing:
+                        Alert.present(title: "Hata", message: "Kullanıcı adı eksik veya boş", actions: .close, from: vc)
+                    default:
+                        Alert.present(title: "Hata", message: error.localizedDescription, actions: .ok(handler: {
+                            print("Oturum Açma Hatası Tamam Butonu")
+                        }),.close, from: vc)
+                        break
+                    }
+                    
                 }
             }
         }
     }
     
     func logout(vc: UIViewController) {
+        let sv = UIViewController.displaySpinner(onView: vc.view)
         PFUser.logOutInBackground { (error: Error?) in
+            UIViewController.removeSpinner(spinner: sv)
             if (error == nil) {
                 //MASK - Oturum Açma sayfasına yönlendir.
-                Destination.go(destination: Identifiers.mainVC, from: vc)
+                Destination.go(destination: Identifiers.auth, from: vc)
             } else {
                 
                 if let description = error?.localizedDescription {
@@ -73,6 +83,10 @@ extension Service {
                 }
             }
         }
+    }
+    
+    func resetPassword(email: String, vc: UIViewController)  {
+        PFUser.requestPasswordResetForEmail(inBackground: email)
     }
     
     
