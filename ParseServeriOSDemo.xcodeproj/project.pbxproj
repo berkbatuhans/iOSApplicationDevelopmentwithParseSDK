@@ -231,13 +231,12 @@
 		128231B52333949B00F55997 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				128D67422344C6DB00EA9924 /* Auth */,
 				128D67392344C5DA00EA9924 /* Cities */,
 				128D673A2344C5EA00EA9924 /* Detail */,
 				128D673B2344C5FA00EA9924 /* Explore */,
-				128D673C2344C60400EA9924 /* Login */,
 				128D673D2344C60F00EA9924 /* Main */,
 				128D67362344C4B300EA9924 /* Onboarding */,
-				128D673E2344C61F00EA9924 /* Register */,
 				128D673F2344C63300EA9924 /* ServiceProvider */,
 				128D67382344C5A400EA9924 /* ServiceType */,
 				128D67402344C64800EA9924 /* Settings */,
@@ -370,6 +369,15 @@
 				128231BF2333A46A00F55997 /* TabbarVC.swift */,
 			);
 			name = Tabbar;
+			sourceTree = "<group>";
+		};
+		128D67422344C6DB00EA9924 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				128D673E2344C61F00EA9924 /* Register */,
+				128D673C2344C60400EA9924 /* Login */,
+			);
+			name = Auth;
 			sourceTree = "<group>";
 		};
 		12DC1FE5233843F8009B049B /* Networking */ = {
