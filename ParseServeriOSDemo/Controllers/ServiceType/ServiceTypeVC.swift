@@ -39,9 +39,9 @@ class ServiceTypeVC: PFQueryCollectionViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         self.setupGridView()
-        DispatchQueue.main.async {
-            self.collectionView.reloadData()
-        }
+//        DispatchQueue.main.async {
+//            self.collectionView.reloadData()
+//        }
     }
     // MARK: UICollectionViewDataSource
     
