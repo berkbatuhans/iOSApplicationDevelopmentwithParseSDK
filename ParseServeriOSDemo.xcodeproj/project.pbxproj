@@ -130,15 +130,7 @@
 				121442C02340FA83008107D3 /* ServiceTypeCell.xib */,
 			);
 			name = ServiceTypeCell;
-			sourceTree = "<group>";
-		};
-		122CFB342341146C0088387B /* ServiceProvider */ = {
-			isa = PBXGroup;
-			children = (
-				122CFB2F2341144E0088387B /* ServiceProviderVC.swift */,
-				122CFB302341144E0088387B /* ServiceProviderVC.xib */,
-			);
-			name = ServiceProvider;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		128231782332627D00F55997 = {
@@ -239,44 +231,19 @@
 		128231B52333949B00F55997 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				128D67392344C5DA00EA9924 /* Cities */,
+				128D673A2344C5EA00EA9924 /* Detail */,
+				128D673B2344C5FA00EA9924 /* Explore */,
+				128D673C2344C60400EA9924 /* Login */,
+				128D673D2344C60F00EA9924 /* Main */,
 				128D67362344C4B300EA9924 /* Onboarding */,
-				12A6480B233FB716002A0658 /* ServiceType */,
-				122CFB342341146C0088387B /* ServiceProvider */,
-				12DC1FEC233A8B4C009B049B /* Settings */,
-				12DC1FE7233967D2009B049B /* Explore */,
-				128231C62333DB4800F55997 /* Main */,
-				128231C12333B9AA00F55997 /* Detail */,
-				128231BE2333A44000F55997 /* Tabbar */,
-				128231B82333953A00F55997 /* Cities */,
-				128231B72333953100F55997 /* Login */,
-				128231B62333951900F55997 /* Register */,
+				128D673E2344C61F00EA9924 /* Register */,
+				128D673F2344C63300EA9924 /* ServiceProvider */,
+				128D67382344C5A400EA9924 /* ServiceType */,
+				128D67402344C64800EA9924 /* Settings */,
+				128D67412344C66200EA9924 /* Tabbar */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		128231B62333951900F55997 /* Register */ = {
-			isa = PBXGroup;
-			children = (
-				128231C72333DB6300F55997 /* RegisterVC.swift */,
-			);
-			name = Register;
-			sourceTree = "<group>";
-		};
-		128231B72333953100F55997 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				128231C42333DB3000F55997 /* LoginVC.swift */,
-			);
-			name = Login;
-			sourceTree = "<group>";
-		};
-		128231B82333953A00F55997 /* Cities */ = {
-			isa = PBXGroup;
-			children = (
-				128231BB2333960400F55997 /* CitiesCell */,
-				1282319F2332A3B100F55997 /* CitiesVC.swift */,
-			);
-			name = Cities;
 			sourceTree = "<group>";
 		};
 		128231B92333957200F55997 /* Views */ = {
@@ -310,30 +277,7 @@
 				1282319D2332A34500F55997 /* CitiesCell.swift */,
 			);
 			name = CitiesCell;
-			sourceTree = "<group>";
-		};
-		128231BE2333A44000F55997 /* Tabbar */ = {
-			isa = PBXGroup;
-			children = (
-				128231BF2333A46A00F55997 /* TabbarVC.swift */,
-			);
-			name = Tabbar;
-			sourceTree = "<group>";
-		};
-		128231C12333B9AA00F55997 /* Detail */ = {
-			isa = PBXGroup;
-			children = (
-				128231C22333B9D600F55997 /* DetailVC.swift */,
-			);
-			name = Detail;
-			sourceTree = "<group>";
-		};
-		128231C62333DB4800F55997 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				128231862332627D00F55997 /* MainVC.swift */,
-			);
-			name = Main;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		128D67362344C4B300EA9924 /* Onboarding */ = {
@@ -344,14 +288,88 @@
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
-		12A6480B233FB716002A0658 /* ServiceType */ = {
+		128D67382344C5A400EA9924 /* ServiceType */ = {
 			isa = PBXGroup;
 			children = (
 				121442BE2340FA24008107D3 /* ServiceTypeCell */,
 				12A6480E233FC7AF002A0658 /* ServiceTypeVC_Back.swift */,
 				12A64810233FD04B002A0658 /* ServiceTypeVC.swift */,
 			);
-			name = ServiceType;
+			path = ServiceType;
+			sourceTree = "<group>";
+		};
+		128D67392344C5DA00EA9924 /* Cities */ = {
+			isa = PBXGroup;
+			children = (
+				128231BB2333960400F55997 /* CitiesCell */,
+				1282319F2332A3B100F55997 /* CitiesVC.swift */,
+			);
+			path = Cities;
+			sourceTree = "<group>";
+		};
+		128D673A2344C5EA00EA9924 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				128231C22333B9D600F55997 /* DetailVC.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		128D673B2344C5FA00EA9924 /* Explore */ = {
+			isa = PBXGroup;
+			children = (
+				12DC1FE823396816009B049B /* ExploreVC.swift */,
+			);
+			path = Explore;
+			sourceTree = "<group>";
+		};
+		128D673C2344C60400EA9924 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				128231C42333DB3000F55997 /* LoginVC.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		128D673D2344C60F00EA9924 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				128231862332627D00F55997 /* MainVC.swift */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		128D673E2344C61F00EA9924 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				128231C72333DB6300F55997 /* RegisterVC.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		128D673F2344C63300EA9924 /* ServiceProvider */ = {
+			isa = PBXGroup;
+			children = (
+				122CFB2F2341144E0088387B /* ServiceProviderVC.swift */,
+				122CFB302341144E0088387B /* ServiceProviderVC.xib */,
+			);
+			name = ServiceProvider;
+			sourceTree = "<group>";
+		};
+		128D67402344C64800EA9924 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				12DC1FED233A8B76009B049B /* SettingsVC.swift */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		128D67412344C66200EA9924 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				128231BF2333A46A00F55997 /* TabbarVC.swift */,
+			);
+			name = Tabbar;
 			sourceTree = "<group>";
 		};
 		12DC1FE5233843F8009B049B /* Networking */ = {
@@ -369,22 +387,6 @@
 				125D4ADF234234E000E1CA20 /* Onboarding.storyboard */,
 			);
 			path = Storyboards;
-			sourceTree = "<group>";
-		};
-		12DC1FE7233967D2009B049B /* Explore */ = {
-			isa = PBXGroup;
-			children = (
-				12DC1FE823396816009B049B /* ExploreVC.swift */,
-			);
-			name = Explore;
-			sourceTree = "<group>";
-		};
-		12DC1FEC233A8B4C009B049B /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-				12DC1FED233A8B76009B049B /* SettingsVC.swift */,
-			);
-			name = Settings;
 			sourceTree = "<group>";
 		};
 		12DC1FEF233A8D2A009B049B /* Settings */ = {
