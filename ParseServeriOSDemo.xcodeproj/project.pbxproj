@@ -141,14 +141,6 @@
 			name = ServiceProvider;
 			sourceTree = "<group>";
 		};
-		125D4AE52342552100E1CA20 /* Onboarding */ = {
-			isa = PBXGroup;
-			children = (
-				125D4AE62342556900E1CA20 /* OnboardingVC.swift */,
-			);
-			name = Onboarding;
-			sourceTree = "<group>";
-		};
 		128231782332627D00F55997 = {
 			isa = PBXGroup;
 			children = (
@@ -247,7 +239,7 @@
 		128231B52333949B00F55997 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				125D4AE52342552100E1CA20 /* Onboarding */,
+				128D67362344C4B300EA9924 /* Onboarding */,
 				12A6480B233FB716002A0658 /* ServiceType */,
 				122CFB342341146C0088387B /* ServiceProvider */,
 				12DC1FEC233A8B4C009B049B /* Settings */,
@@ -342,6 +334,14 @@
 				128231862332627D00F55997 /* MainVC.swift */,
 			);
 			name = Main;
+			sourceTree = "<group>";
+		};
+		128D67362344C4B300EA9924 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				125D4AE62342556900E1CA20 /* OnboardingVC.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		12A6480B233FB716002A0658 /* ServiceType */ = {
