@@ -93,14 +93,14 @@ class ServiceTypeVC: PFQueryCollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let sv = UIViewController.displaySpinner(onView: self.view)
-        DispatchQueue.main.asyncAfter(deadline: .now()+4.0) {
+//        let sv = UIViewController.displaySpinner(onView: self.view)
+//        DispatchQueue.main.asyncAfter(deadline: .now()+4.0) {
             let object = self.objects[indexPath.row] as? ServiceType
             let vc = self.storyboard?.instantiateViewController(withIdentifier: Identifiers.serviceProvider) as! ServiceProviderVC
                    vc.currentObject = object
             self.navigationController?.pushViewController(vc, animated: true)
 //
-        }
+//        }
         
 //        collectionView.deselectItem(at: indexPath, animated: true)
 //        let x = objects[indexPath.row] as? ServiceType
@@ -117,18 +117,18 @@ class ServiceTypeVC: PFQueryCollectionViewController {
 //        } else {
 //            // Fallback on earlier versions
 //        }
-        
-        if let selectedCells = collectionView.indexPathsForSelectedItems {
-          // 1
-          let items = selectedCells.map { $0.item }.sorted().reversed()
-            debugPrint("Toplam Adet \(items.count)")
-          // 2
-          for item in items {
-              print(item)
-          }
-          
-        }
-        UIViewController.removeSpinner(spinner: sv)
+//
+//        if let selectedCells = collectionView.indexPathsForSelectedItems {
+//          // 1
+//          let items = selectedCells.map { $0.item }.sorted().reversed()
+//            debugPrint("Toplam Adet \(items.count)")
+//          // 2
+//          for item in items {
+//              print(item)
+//          }
+//
+//        }
+//        UIViewController.removeSpinner(spinner: sv)
         
 //
     }

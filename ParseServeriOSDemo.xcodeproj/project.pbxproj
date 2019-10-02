@@ -257,13 +257,13 @@
 		128231BA2333958400F55997 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				12AD6CAB233788B500A0944D /* Destination.swift */,
 				128231C92334168C00F55997 /* Register.swift */,
 				125074152335351E008D40B9 /* Login.swift */,
 				128231CD233424DE00F55997 /* Enums.swift */,
 				12AD6CA92337832000A0944D /* Alert.swift */,
 				12AD6CA72336D06500A0944D /* City.swift */,
 				12A64812233FDBE2002A0658 /* ServiceType.swift */,
-				12AD6CAB233788B500A0944D /* Destination.swift */,
 				12DC1FEA233A4CC9009B049B /* Venue.swift */,
 				12A64809233E5443002A0658 /* CityE.swift */,
 			);
