@@ -16,9 +16,6 @@ class SettingsVC: UITableViewController {
     
     //MARK: - Properties
     
-    var name: String = ""
-    var email: String = ""
-    
     // var tableView: UITableView!
     var userInfoHeader: UserInfoHeader!
     
@@ -35,41 +32,21 @@ class SettingsVC: UITableViewController {
         
         switch (indexPath.section, indexPath.row) {
         case (0, 0):
-            let query = PFUser.query()
-            query?.whereKey("email", equalTo: PFUser.current()!.email!)
-            query?.findObjectsInBackground(block: { (objects, error) in
-                let object = objects?.first as! PFUser
-                let name = object.value(forKey: "firstName") as! String
-                let lastName = object.value(forKey: "lastName") as! String
+            let user = PFUser.current()
+            if user != nil {
+                let name = user?.value(forKey: "firstName") as! String
+                let lastName = user?.value(forKey: "lastName") as! String
                 let firstLast = name + " " + lastName
                 cell.textLabel?.text = firstLast
-//                    String(object.email!)
-                cell.detailTextLabel?.text = String(object.email!)
-            })
-            
+                cell.detailTextLabel?.text = String((user?.email!)!)
+            } else {
+                
+            }
             
         default:
             break
         }
         return cell
-        //        let cell = tableView.dequeueReusableCell(withIdentifier: "userSummaryInformationCell", for: indexPath)
-        //        if indexPath.section == 0 && indexPath.row == 0 {
-        //
-        //        let query = PFUser.query()
-        //        query?.whereKey("email", equalTo: PFUser.current()!.email!)
-        //        query?.findObjectsInBackground(block: { (objects, error) in
-        //            let object = objects?.first as! PFUser
-        //            cell.textLabel?.text = String(object.email!)
-        //            cell.detailTextLabel?.text = String(object.username!)
-        //            print(self.name)
-        //            print(self.email)
-        //        })
-        //
-        //
-        //        } else {
-        //            return UITableViewCell()
-        //        }
-        //        return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

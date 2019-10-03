@@ -56,15 +56,13 @@ class ServiceTypeVC: PFQueryCollectionViewController {
         let object = object as! ServiceType
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ServiceTypeCell
         
-        //        cell.set(name: object.name!, image: object.image!)
         cell.name.text = object.name
         let imageFile = object.image
         cell.image.image = UIImage(named: "logo")
         cell.image.file = imageFile
         cell.image.loadInBackground()
         cell.image.layer.cornerRadius = 15.0
-//        cell.vfx.isHidden = false
-//        cell.vfx.backgroundColor = UIColor.startColor.withAlphaComponent(0.0)
+
         //rd'a dönüştürme.
         cell.contentView.layer.cornerRadius = 15.0
         cell.contentView.layer.borderWidth = 1.0
@@ -77,10 +75,6 @@ class ServiceTypeVC: PFQueryCollectionViewController {
         cell.layer.masksToBounds = false
         cell.layer.shadowPath = UIBezierPath(roundedRect: cell.bounds,cornerRadius: cell.contentView.layer.cornerRadius).cgPath
         
-//        cell.vfx.clipsToBounds = true
-//        let shapeLayer = CAShapeLayer()
-//        shapeLayer.path = UIBezierPath(roundedRect: cell.bounds, cornerRadius: cell.contentView.layer.cornerRadius).cgPath
-//        cell.vfx.layer.mask = shapeLayer
         return cell
     }
     
@@ -93,90 +87,11 @@ class ServiceTypeVC: PFQueryCollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let sv = UIViewController.displaySpinner(onView: self.view)
-//        DispatchQueue.main.asyncAfter(deadline: .now()+4.0) {
             let object = self.objects[indexPath.row] as? ServiceType
             let vc = self.storyboard?.instantiateViewController(withIdentifier: Identifiers.serviceProvider) as! ServiceProviderVC
                    vc.currentObject = object
             self.navigationController?.pushViewController(vc, animated: true)
-//
-//        }
-        
-//        collectionView.deselectItem(at: indexPath, animated: true)
-//        let x = objects[indexPath.row] as? ServiceType
-//        print("SELECTED \(x!.name)")
-//        let vc = storyboard?.instant.instantiateViewController(identifier: Identifiers.serviceProvider) as! ServiceProviderVC
-       
-//        self.collectionView.deselectAllItems(animated: false)
-//        collectionView.deselectAllItems(false)
-        
-//        if #available(iOS 13.0, *) {
-//
-////            collectionView.deselectItem(at: indexPath, animated: false)
-//
-//        } else {
-//            // Fallback on earlier versions
-//        }
-//
-//        if let selectedCells = collectionView.indexPathsForSelectedItems {
-//          // 1
-//          let items = selectedCells.map { $0.item }.sorted().reversed()
-//            debugPrint("Toplam Adet \(items.count)")
-//          // 2
-//          for item in items {
-//              print(item)
-//          }
-//
-//        }
-//        UIViewController.removeSpinner(spinner: sv)
-        
-//
     }
-    
-    override func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        if let selectedItems = collectionView.indexPathsForSelectedItems, selectedItems.count == 0 {
-            print("seçilecek bulunamadı")
-        } else {
-            print("seçilecek item sayısı")
-        }
-    }
-    
-    
-//    override func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-//        print("deselect")
-//
-//    }
-
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //        if segue.identifier == "serviceProviderVC"
-        //        {
-        //            if let controller = (segue.destination as! ServiceProviderVC) {
-        //
-        //            }
-        //            if let indexPath = self.collectionView.indexPathsForSelectedItems?.first {
-        //                let row = Int(indexPath.row)
-        //                controller.currentObject = objects[row] as? ServiceType
-        //            }
-        //        }
-        
-//        if segue.identifier == "serviceProviderVC" {
-//            print("segue yakalandı!")
-//            if let destination = segue.destination as? ServiceProviderVC {
-//                let cell = sender as! ServiceTypeCell
-//                let indexPath = collectionView.indexPath(for: cell)
-//                let selectedData = objects[(indexPath?.row)!]
-//
-//                // postedData is the variable that will be sent, make sure to declare it in YourDestinationViewController
-//                destination.currentObject = selectedData as! ServiceType
-//            }
-//        }
-    }
-    
-    
-    
-    
-    
 }
 
 extension ServiceTypeVC {

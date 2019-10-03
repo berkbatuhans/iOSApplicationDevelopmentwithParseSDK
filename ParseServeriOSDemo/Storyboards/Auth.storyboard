@@ -11,7 +11,7 @@
         <!--ForgotPasswordVC-->
         <scene sceneID="9lI-Lk-QhJ">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="nvX-vm-TE1" userLabel="ForgotPasswordVC" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="nvX-vm-TE1" userLabel="ForgotPasswordVC" customClass="PasswordResetVC" customModule="Organizasyon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4FK-VR-w48">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -42,6 +42,9 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-posta" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KZ8-ut-6sq">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="Ja3-Zb-ASy"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
@@ -66,13 +69,11 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
+                                                    <action selector="resetPassword:" destination="nvX-vm-TE1" eventType="touchUpInside" id="hLj-Ye-45n"/>
                                                     <action selector="signIn_sender:" destination="Kho-o5-D6O" eventType="touchUpInside" id="qfT-tg-PDu"/>
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstItem="cNe-kO-a2n" firstAttribute="height" secondItem="KZ8-ut-6sq" secondAttribute="height" id="gcW-oU-eZl"/>
-                                        </constraints>
                                     </stackView>
                                 </subviews>
                             </stackView>
@@ -86,6 +87,9 @@
                         <viewLayoutGuide key="safeArea" id="NOY-gX-sUK"/>
                     </view>
                     <navigationItem key="navigationItem" id="bM6-lY-cno"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="KZ8-ut-6sq" id="Lck-ap-wzI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nd0-kZ-DBA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -94,7 +98,7 @@
         <!--GİRİŞ YAP-->
         <scene sceneID="aIF-pB-kB6">
             <objects>
-                <viewController storyboardIdentifier="LoginVCC" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Kho-o5-D6O" customClass="LoginVC" customModule="ParseServeriOSDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVCC" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Kho-o5-D6O" customClass="LoginVC" customModule="Organizasyon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="49S-gE-Svw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -241,7 +245,7 @@
         <!--RegisterVC-->
         <scene sceneID="ABJ-fS-QSm">
             <objects>
-                <viewController storyboardIdentifier="RegisterVC" modalPresentationStyle="formSheet" id="cKq-6v-JJ3" customClass="RegisterVC" customModule="ParseServeriOSDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterVC" modalPresentationStyle="formSheet" id="cKq-6v-JJ3" customClass="RegisterVC" customModule="Organizasyon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6zh-fX-BVT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

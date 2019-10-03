@@ -21,16 +21,6 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        if #available(iOS 13.0, *) {
-//            self.presentedViewController?.isModalInPresentation = false
-//            self.presentedViewController?.modalPresentationStyle = .fullScreen
-//        } else {
-//            // Fallback on earlier versions
-//        }
-        //var registerController = PFSignUpViewController()
-        //registerController.delegate = self
-        //self.present(registerController,animated: true,completion: nil)
-        
         signUpPasswordField.text = ""
         signUpUsernameField.text = ""
         firstName.delegate = self
@@ -77,25 +67,10 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
         user.email = register.userEmail
         user.password = register.password
         Service.shared.register(user: user, self)
-        
-//        let user = PFUser()
-//        user.username = signUpUsernameField.text
-//        user.password = signUpPasswordField.text
-//        Service.shared.register(user: user,vc: self)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -12,8 +12,6 @@
  class CitiesVC: PFQueryTableViewController {
     
     override func queryForTable() -> PFQuery<PFObject> {
-//        let query = PFQuery(className: "Cities")
-//        query.order(byAscending: "name")
         let query = City.query()!
         query.order(byAscending: "stateCode")
         return query
@@ -21,6 +19,11 @@
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.tintColor = .white
+//        searchController.searchResultsUpdater = self
+//        searchController.obscuresBackgroundDuringPresentation = false
+//        searchController.searchBar.placeholder = "Search artists"
+//        self.navigationItem.searchController = searchController
+//        self.definesPresentationContext = true
         //tableView.rowHeight = UITableView.automaticDimension
         //tableView.estimatedRowHeight = 300
     }
@@ -35,7 +38,7 @@
 //        cell.imageView?.image = UIImage(named: "logo")
 //        cell.cellImageView.file = imageFile
 //        cell.cellImageView.loadInBackground()
-        cell.textLabel?.text = object.name
+        cell.textLabel?.text = object.name?.uppercased()
         cell.detailTextLabel?.text = object.stateCode?.stringValue
         return cell
     }
@@ -78,4 +81,17 @@
 //        }
     }
     
+//    func searchBarIsEmpty() -> Bool {
+//        return searchController.searchBar.text?.isEmpty ?? true
+//    }
+//
+//    func filterContentForSearchText(_ searchText: String, scope: String = "All"){
+//        let object = objects?.filter({ (cities: PFObject?) -> Bool in
+//            let city = cities as! City
+//            return (city.name?.lowercased().contains(searchText.lowercased()))!
+//        })
+//        print(object!)
+//    }
+    
  }
+

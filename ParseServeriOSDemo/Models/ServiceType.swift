@@ -25,7 +25,8 @@ final class ServiceType: PFObject {
     override class func query() -> PFQuery<PFObject>? {
         let query = PFQuery(className: ServiceType.parseClassName())
         query.order(byDescending: "createdAt")
-        query.cachePolicy = .networkOnly
+//        query.cachePolicy = .networkOnly
+        query.cachePolicy = .networkElseCache
         return query
     }
 }

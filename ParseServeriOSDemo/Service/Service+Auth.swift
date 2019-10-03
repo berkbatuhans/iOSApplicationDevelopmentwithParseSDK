@@ -87,6 +87,26 @@ extension Service {
     
     func resetPassword(email: String, vc: UIViewController)  {
         PFUser.requestPasswordResetForEmail(inBackground: email)
+        PFUser.requestPasswordResetForEmail(inBackground: email) { (success: Bool, error: Error?) in
+            if success {
+                //TODO: - Kayıt başarılı ise yönlendir.
+//                Destination.go(destination: Identifiers.mainVC,from: vc)
+                Alert.present(title: "Şifre Sıfırlama gönderildi", message: "şifreniz sıfırlandı mailinizi kontrol edin", actions: .close, from: vc)
+            } else {
+                
+                if let error = error, let code = PFErrorCode(rawValue: error._code) {
+                    print(code)
+                    switch code {
+                    case .errorUsernameMissing:
+                        Alert.present(title: "Kayıt Ol", message: "Kullanıcı adı eksik veya boş", actions: .close, from: vc)
+                    default:
+                        Alert.present(title: "Kayıt Ol", message: error.localizedDescription, actions: .close, from: vc)
+                        break
+                    }
+                    
+                }
+            }
+        }
     }
     
     

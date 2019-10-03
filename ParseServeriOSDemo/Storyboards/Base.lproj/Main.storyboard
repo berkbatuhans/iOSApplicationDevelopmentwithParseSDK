@@ -12,7 +12,7 @@
         <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="AuthVC" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="MainVC" customModule="ParseServeriOSDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AuthVC" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="MainVC" customModule="Organizasyon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -154,12 +154,12 @@
         <!--Şehirler-->
         <scene sceneID="4Gj-q0-k5b">
             <objects>
-                <tableViewController storyboardIdentifier="CitiesVC" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gQ6-0v-uCE" customClass="CitiesVC" customModule="ParseServeriOSDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="CitiesVC" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gQ6-0v-uCE" customClass="CitiesVC" customModule="Organizasyon" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="ffD-tz-5pM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" textLabel="PRd-Xk-mr0" detailTextLabel="VAd-pB-xxP" rowHeight="69" style="IBUITableViewCellStyleValue1" id="ddE-1t-Ib1" customClass="CitiesCell" customModule="ParseServeriOSDemo" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" textLabel="PRd-Xk-mr0" detailTextLabel="VAd-pB-xxP" rowHeight="69" style="IBUITableViewCellStyleValue1" id="ddE-1t-Ib1" customClass="CitiesCell" customModule="Organizasyon" customModuleProvider="target">
                                 <rect key="frame" x="20" y="55.5" width="374" height="69"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ddE-1t-Ib1" id="u1Z-F0-0SS">
@@ -204,7 +204,7 @@
         <!--DetailVC-->
         <scene sceneID="XOt-xk-JVF">
             <objects>
-                <viewController storyboardIdentifier="detailViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5HW-dx-a7v" customClass="DetailVC" customModule="ParseServeriOSDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="detailViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5HW-dx-a7v" customClass="DetailVC" customModule="Organizasyon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="77C-Tl-K2q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -244,7 +244,7 @@
         <!--TabbarVC-->
         <scene sceneID="N5m-ep-sdS">
             <objects>
-                <tabBarController storyboardIdentifier="MainVC" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hI7-kq-8an" customClass="TabbarVC" customModule="ParseServeriOSDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainVC" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hI7-kq-8an" customClass="TabbarVC" customModule="Organizasyon" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" itemPositioning="fill" id="d4S-Z4-gfy">
@@ -267,7 +267,7 @@
         <!--Service ProviderVC-->
         <scene sceneID="QBr-EK-E57">
             <objects>
-                <viewController storyboardIdentifier="ServiceProviderVC" id="EbX-2U-sfu" customClass="ServiceProviderVC" customModule="ParseServeriOSDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ServiceProviderVC" id="EbX-2U-sfu" customClass="ServiceProviderVC" customModule="Organizasyon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="swA-E9-lPT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -278,12 +278,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LVd-zN-gMa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3428.985507246377" y="416.51785714285711"/>
+            <point key="canvasLocation" x="3251" y="417"/>
         </scene>
         <!--ExploreVC-->
         <scene sceneID="RzZ-6E-XUQ">
             <objects>
-                <viewController id="9qo-KB-gip" customClass="ExploreVC" customModule="ParseServeriOSDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9qo-KB-gip" customClass="ExploreVC" customModule="Organizasyon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RG1-RB-W05">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -315,7 +315,7 @@
         <!--Diğer-->
         <scene sceneID="fOF-yM-8yx">
             <objects>
-                <tableViewController id="aba-ef-V1H" customClass="SettingsVC" customModule="ParseServeriOSDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="aba-ef-V1H" customClass="SettingsVC" customModule="Organizasyon" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" separatorInsetReference="fromAutomaticInsets" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="mIz-N2-mY1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -696,7 +696,7 @@
         <!--Hizmet Kategorileri-->
         <scene sceneID="hTp-bw-eB0">
             <objects>
-                <collectionViewController id="9R8-9e-kJv" customClass="ServiceTypeVC" customModule="ParseServeriOSDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="9R8-9e-kJv" customClass="ServiceTypeVC" customModule="Organizasyon" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="lBC-fl-5yy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -708,7 +708,7 @@
                             <inset key="sectionInset" minX="16" minY="16" maxX="16" maxY="16"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="eyy-2h-75e" customClass="ServiceTypeCell_Backup" customModule="ParseServeriOSDemo" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="eyy-2h-75e" customClass="ServiceTypeCell_Backup" customModule="Organizasyon" customModuleProvider="target">
                                 <rect key="frame" x="16" y="16" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Mcb-5a-GNG">
